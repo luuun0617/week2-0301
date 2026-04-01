@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -7,7 +7,7 @@ const API_PATH = import.meta.env.VITE_API_PATH;
 
 import { emailValidation } from "../utils/validation";
 
-function Login({ getProducts, setIsAuth }){
+function Login({ setIsAuth }){
     
     // const [formData, setFormData] = useState({
     //     username: "",
@@ -26,14 +26,14 @@ function Login({ getProducts, setIsAuth }){
       }
     });
 
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      //console.log(name,value;)
-      setFormData((preData) => ({
-        ...preData,
-        [name]: value,
-      }))
-    };
+    // const handleInputChange = (e) => {
+    //   const { name, value } = e.target;
+    //   //console.log(name,value;)
+    //   setFormData((preData) => ({
+    //     ...preData,
+    //     [name]: value,
+    //   }))
+    // };
 
     const onSubmit = async (formData) => {
       try {
